@@ -14,4 +14,11 @@ Then run:
 
 -----------
 
+## Disclaimer
+
+No error handling provided! The code is dirty, though it works.
+Testing and feedback is strongly encouraged.
+
+-----------
+
 P.S. Пиво.
