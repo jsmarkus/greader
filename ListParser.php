@@ -20,7 +20,13 @@ class ListParser implements IConsumer {
 	
 	public function data($sax, $data) {
 		if(null !== $this->currentField) {
-			$this->currentEntry[substr($this->currentField, 4)] = $data;
+			$fieldName = substr($this->currentField, 4);
+
+			if(!isset($this->currentEntry[$fieldName])) {
+				$this->currentEntry[$fieldName] = '';
+			}
+
+			$this->currentEntry[$fieldName] .= $data;
 		}
 	}
 
